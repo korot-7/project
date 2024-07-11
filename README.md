@@ -101,10 +101,10 @@ Date — дата и время создания коммита;
 
 ```mermaid
 graph TD;
-	untracked(неотслеживаемый) -- "git add" --> staged(ВСпискеКоммитов)/tracked;
-	staged(ВСпискеКоммитов)/tracked -- "git commit" --> tracked(отслеживаемый);
-	tracked(отслеживаемый) -- "Изменения" --> modified(изменённый);
-	modified(изменённый) -- "git add" --> staged(ВСпискеКоммитов)/tracked;
-	staged(ВСпискеКоммитов)/tracked -- "Изменения" --> modified(изменённый);
+	untracked -- "git add" --> staged/tracked;
+	staged/tracked -- "git commit" --> tracked;
+	tracked -- "Изменения" --> modified;
+	modified -- "git add" --> staged/tracked;
+	staged/tracked -- "Изменения" --> modified;
 ```
 
